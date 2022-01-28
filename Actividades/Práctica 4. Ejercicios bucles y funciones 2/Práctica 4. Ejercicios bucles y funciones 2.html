@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+<body>
+    <script>
+        /*Ejercicio 1: Realizar un programa que imprima 25 términos de la serie 11 - 22 - 33 - 44, etc. (No se ingresan valores por teclado).*/
+       // sum11();
+        function sum11(){
+            for(i=1;i<=25;i++)
+                document.write(11*i + "-");
+        }
+
+         /*Ejercicio 2: Mostrar los múltiplos de 8 hasta el valor 500. Debe aparecer en pantalla 8 -16 -24, etc.*/
+     //   mult8();
+
+        function mult8(){
+            let i = 1, cont = 8;
+            while(cont < 500){
+                document.write(8*i + "-");
+                i++
+                cont = 8*i 
+            }
+        }
+
+        /*Ejercicio 3: Escribir un programa que lea 10 notas de alumnos y nos informe cuántos tienen notas mayores o iguales a 7 y cuántos menores.*/
+         notas();
+        function notas(){
+        let contmay = 0, contmen = 0, i=1;
+        for(i=1;i<=10;i++){
+            let nota = Number(prompt("Introduce una nota:"));
+            if(nota>=7){
+                contmay++;
+            }
+            else{
+                contmen++;
+            }
+        }
+        document.write("Notas mayores o iguales a 7: " + contmay + " <br> ");
+            document.write("Notas menores a 7: " + contmen + "<br> ");
+        }
+
+
+        /*Ejercicio 4: Se ingresan un conjunto de 5 alturas de personas por teclado. Mostrar la altura promedio de las personas. */
+
+           // altmed();
+        function altmed(){
+            let sum = 0;
+            for(i=1;i<=5;i++){
+                let alt = Number(prompt("Introduce la altura de la persona:"));
+                sum = sum + alt;
+            }
+            document.write("La altura promedio es: " + sum/5);
+        }
+      
+        /*Ejercicio 5: Realizar un programa que acumule (sume) valores ingresados por teclado 
+        hasta ingresa el 9999 (no sumar dicho valor, solamente indica que ha finalizado la carga). Imprimir el valor acumulado e informar si dicho valor es cero, mayor a cero o menor a cero.*/
+
+       // acumula();
+        function acumula(){
+            let acum = 0;
+            let cont = 0;
+
+            while(cont != 9999){
+                cont = Number(prompt("Introduce un número. \n Introduce el 9999 para finalizar"));
+                acum = acum + cont;
+                document.write(acum+"<br>")
+            }
+            document.write("El acumulado total es: " + (acum-9999));
+        }
+      
+        /*Ejercicio 6: Desarrollar un programa que solicite la carga de 10 números e imprima la suma de lo últimos 5 valores ingresados.*/
+       
+       // ej6();
+        function ej6(){;
+         let sum = 0;
+        for(i=1;i<=10;i++){
+            let num = Number(prompt("Introduce un número:"));
+                if (i>5){
+                    sum = sum + num;
+                }
+        }
+        document.write("La suma de los últimos 5 números es: " + sum);
+      }
+
+        /*Ejercicio 7:Se realiza la carga de 10 valores enteros por teclado. Se desea conocer:
+            a) La cantidad de valores negativos ingresados.
+            b) La cantidad de valores positivos ingresados.
+            c) La cantidad de múltiplos de 15.
+            d) El valor acumulado de los números ingresados que son pares. */
+    // ej7();
+    function ej7(){;
+        let sumpar = 0, numpos = 0, numneg = 0, nummult = 0;
+
+            for(i=1;i<=10;i++){
+                let num = Number(prompt("Introduce un número:"));
+                    if (num>0){  /*Numero positivos*/
+                        numpos = numpos +1;
+                    }
+                    else if(num<0){     /*Numeros negativos*/
+                        numneg = numneg +1;
+                    }
+                    
+                    if(num%15 == 0){
+                         nummult = nummult +1;
+                    }
+                    
+                    if(num%2 == 0){     /*Numeros pares*/
+                        sumpar=sumpar + num;
+                    }
+            }
+        document.write("La cantidad de negativos ingresados es: " + numneg + "<br>");
+        document.write("La cantidad de positivos ingresados es: " + numpos + "<br>");
+        document.write("La cantidad de multiplos de 15 ingresados es: " + nummult + "<br>");
+        document.write("El acumulado de los números pares ingresados es: " + sumpar + "<br>");
+      }
+
+        /*Ejercicio 8: Desarrollar una función que retorne la cantidad de dígitos que tiene una variable entera positiva de hasta 5 dígitos.*/
+
+     // numdigitos()
+        function numdigitos(){
+            let num1 = Number(prompt("Introduce un número de máximo 5 cifras."))
+            if (Number.isInteger(num1) == true && num1 > 0){
+                if (num1.lenght <= 5){
+                    document.write("El número " + num1 + " tiene " + num1.lenght + " cifras.");
+                }
+                else{
+                    document.write("El número introducido tiene más de 5 dígitos.")
+                }
+            }
+            else{
+                document.write("No se ha introducido un número entero positivo")
+            }     
+        }
+       
+        /*Ejercicio 9: Elaborar una función que reciba tres enteros y retorne el promedio.*/
+
+      //  promedio3(Number(prompt("Introduce el primer número")),Number(prompt("Introduce el segundo número")), Number(prompt("Introduce el tercer número")));
+        function promedio3(num1,num2,num3){
+
+            document.write("El promedio de los números introducidos es: " + (num1+num2+num3)/3);
+        }
+       
+        /*Ejercicio 10: Confeccionar una función que reciba una fecha con el formato de día, mes y año y retorne un string con un formato similar a: "Hoy es 27 de enero de 2020"*/
+        
+        //fecha(12,12,2000);
+       
+        function fecha(dia,mes,ano){
+            
+            let nommes = ['enero','febrero', 'marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+
+            document.write("Hoy es " + dia + " de " + nommes[mes-1] + " de " + ano);
+        }
+
+    </script>
+</body>
+</html>
