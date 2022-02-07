@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 8 Ej 4</title>
+</head>
+<body>
+ <!--Ejercicio 4:  Codificar una página que permita ingresar una password y luego muestre una ventana de alerta si tiene menos de 5 caracteres.-->
+
+ <p>Introduce una contraseña</p>
+ <input type="password" name="contrasña" id="contraseña">
+ <input type="button" value="verificar contraseña" name="check" id="check" onclick="pass5()">
+    <script>
+        function pass5(){
+            let pass = document.getElementById('contraseña').value;
+
+            if(pass.length <5){
+                alert('La contraseña debe tener más de 5 dígitos');
+            }
+        }
+    </script>
+</body>
+</html>

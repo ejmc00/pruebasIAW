@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 8 Ej 3</title>
+</head>
+<body>
+     <!--Ejercicio 3: Confeccionar un formulario que permita ingresar el nombre y edad de una persona y luego lo muestre en un mensaje.-->
+
+     <label for="nombre">Nombre: </label>
+    <input type="text" id="nombre" on="">
+    <label for="edad"><br>Edad: </label>
+    <input type="text" id="edad">
+
+    <input type="button" name="enviar" value="enviar" onclick="muestradatos()">
+
+    <script>
+       function muestradatos(){
+
+            let nom = document.getElementById('nombre').value;
+            let edad = document.getElementById('edad').value;
+            alert('Tu nombre es ' + nom + '\nTu edad es ' + edad )
+        }
+    </script>
+
+</body>
+</html>

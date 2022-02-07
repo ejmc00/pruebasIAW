@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 8 Ej 2</title>
+</head>
+<body>
+    <!--Ejercicio 2:  Crear una página web en la que dispondremos un botón y cada vez que se presione, mostraremos un contador. (se mostrará el mensaje, el contador ahora vale 1, el contador vale 2, .....) -->
+   
+    <input id="contador" type="button" value="Contador" onclick="incremento()">
+
+    <script>
+        let cont = 1;
+        function incremento(){
+            
+            alert('El contador ahora vale ' + cont);
+            cont ++;
+        }
+    </script>
+   
+</body>
+</html>

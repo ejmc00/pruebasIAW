@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 8 Ej 5</title>
+</head>
+<body>
+    <!--Ejercicio 5: - Codificar una página en la que aparezcan dos campos de texto tipo password. Cuando se presione un botón mostrar si las dos claves ingresadas son iguales o no (es muy común solicitar al operador el ingreso de dos veces de su clave para validar si las escribió correctamente, esto se hace cuando se crea una password para el ingreso a un sitio o para el cambio de una existente).-->
+
+    <label for="pass1">Escribe la contraseña: </label>
+    <input type="password" id="pass1">
+    <label for="pass2"><br>Repita la contraseña: </label>
+    <input type="password" id="pass2">
+    <input type="button" value="Verificar contraseñas" id="verificador" onclick="verpass()">
+
+    <script>
+        function verpass(){
+            let pass1 = document.getElementById('pass1').value;
+            let pass2 = document.getElementById('pass2').value;
+
+            if(pass1 == pass2){
+                alert('Contraseña correcta');
+            }
+            else{
+                alert('Contraseña incorrecta, la contraseña no coincide');
+            }
+
+        }
+    </script>
+
+</body>
+</html>
