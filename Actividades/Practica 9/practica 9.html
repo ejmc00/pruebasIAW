@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 9</title>
+    <link rel="stylesheet" href="estilo_form.css">
+</head>
+<body>
+<script src="practica9.js"></script>
+
+<form>
+
+    <label for="nombre">Nombre: </label>
+    <input type="text" id="nombre"> <br>
+    
+    <label for="apellidos">Apellidos: </label>
+    <input type="text" id="apellidos"> <br>
+    
+    <label for="email">E-mail: </label>
+    <input type="email" id="email"> <br>
+   
+    <label for="hm">Sexo: <br>
+        <input type="radio" name="hm" id="hm" value="hombre">Hombre <br>
+        <input type="radio" name="hm" id="hm" value="mujer">Mujer <br>
+    </label> <br>
+        
+    <label for="cuadortxt">Ingresa aquí tu mensaje: </label><br>
+    <textarea name="cuadrotxt" id="cuadrotxt" cols="30" rows="5">...tu mensaje aqui...</textarea> <br>
+    <input type="checkbox" id="publi"> Deseo recibir publicidad en mi email <br>
+    
+    <label for="pais"> Procedencia</label>
+    <select name="pais" id="pais">
+        <option selected="true" value="default">Seleccionne un país</option>
+        <option value="españa">Españita</option>
+        <option value="eeuu">EEUU</option>
+        <option value="andorra">Andorra</option>
+        <option value="micasa">República independiente de mi casa</option>
+    </select>
+    
+    <label for="archivo">Adjuntar archivo: </label> <br>
+    <input type="file"id="subir"> <br>
+   
+    <input type="submit" value="Enviar" id="enviar" onclick="validar()"> 
+    <input type="reset" id="borrar" value="Borrar datos">
+
+</form>
+
+
+
+</body>
+</html>
